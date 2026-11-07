@@ -1,0 +1,15 @@
+model,stored_params,unused_params,active_params,decision_layer_params,trainable_quantum_theta
+CNN,218536,0,218536,520 (linear classifier),0
+ResNet18,11203208,0,11203208,520 (linear classifier),0
+WaferMamba,169384,0,169384,520 (linear classifier),0
+EfficientNetB0,4092612,0,4092612,520 (linear classifier),0
+MobileViTXXS,972728,0,972728,520 (linear classifier),0
+WaferMamba_FT,169384,0,169384,520 (linear classifier),0
+MLP_FT,169992,520,169472,608 (bridge 536 + output layer 72),0
+Tanh_FT,169992,520,169472,608 (bridge 536 + output layer 72),0
+Trig_FT,170056,520,169536,672 (bridge 536 + output layer 136),0
+Q_NoEnt,169961,520,169441,577 (bridge 536 + θ 32 + scale/bias 9),32
+Q_Frozen,169961,520,169441,577 (bridge 536 + θ 32 + scale/bias 9),0
+Q_Reps0,169937,520,169417,553 (bridge 536 + θ 8 + scale/bias 9),8
+Q_Reps1,169945,520,169425,561 (bridge 536 + θ 16 + scale/bias 9),16
+QWaferMamba_E2E,169961,520,169441,577 (bridge 536 + θ 32 + scale/bias 9),32

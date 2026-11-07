@@ -1,0 +1,119 @@
+{
+  "SEEDS": [
+    42,
+    7,
+    123,
+    2024,
+    31
+  ],
+  "EPOCHS": 60,
+  "PATIENCE": 12,
+  "WARMUP": 3,
+  "BATCH": 128,
+  "IMG_SIZE": 64,
+  "LATENT": 64,
+  "NCLS": 8,
+  "LR_MAIN": {
+    "CNN": 0.002,
+    "ResNet18": 0.001,
+    "WaferMamba": 0.002,
+    "EfficientNetB0": 0.001,
+    "MobileViTXXS": 0.001
+  },
+  "WD": 0.05,
+  "LABEL_SMOOTH": 0.05,
+  "IMBALANCE": "loss",
+  "MODELS": [
+    "CNN",
+    "ResNet18",
+    "WaferMamba",
+    "EfficientNetB0",
+    "MobileViTXXS"
+  ],
+  "RANDOM_SPLIT_MODELS": [
+    "WaferMamba",
+    "ResNet18"
+  ],
+  "QUBITS": 8,
+  "QDEPTH": 3,
+  "RES_SEED": 0,
+  "N_BOOT": 1000,
+  "SPLIT_SEED": 42,
+  "HQ_QUBITS": 8,
+  "HQ_REPS": 3,
+  "FT_EPOCHS": 20,
+  "FT_PATIENCE": 6,
+  "FT_HEAD_WARMUP": 3,
+  "FT_CW_POWER": 0.5,
+  "LR_BACKBONE": 0.0002,
+  "LR_QUANTUM": 0.01,
+  "VQC_QUBITS": 8,
+  "VQC_REPS": 2,
+  "VQC_PER_CLASS": 300,
+  "VQC_MAXITER": 400,
+  "HEAD_KINDS": [
+    "MLP_FT",
+    "Tanh_FT",
+    "Trig_FT"
+  ],
+  "ABL_KINDS": [
+    "Q_NoEnt",
+    "Q_Frozen",
+    "Q_Reps0",
+    "Q_Reps1"
+  ],
+  "STAGE2_KINDS": [
+    "QWaferMamba_E2E",
+    "WaferMamba_FT",
+    "MLP_FT",
+    "Tanh_FT",
+    "Trig_FT",
+    "Q_NoEnt",
+    "Q_Frozen",
+    "Q_Reps0",
+    "Q_Reps1"
+  ],
+  "PARTITION_SEEDS": [
+    101,
+    202,
+    303
+  ],
+  "PARTITION_MODELS": [
+    "WaferMamba",
+    "ResNet18"
+  ],
+  "PARTITION_STAGE2": [
+    "QWaferMamba_E2E",
+    "WaferMamba_FT"
+  ],
+  "SHOTS_LIST": [
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192
+  ],
+  "SHOT_REPEATS": 5,
+  "NOISE_SHOTS": 1024,
+  "NOISE_N": null,
+  "FAKE_BACKENDS": [
+    "FakeTorino",
+    "FakeSherbrooke"
+  ],
+  "REP_DELAY_US": 250.0,
+  "EQUIV_MARGIN": 0.01,
+  "N_HBOOT": 2000,
+  "DEFECTS": [
+    "Center",
+    "Donut",
+    "Edge-Loc",
+    "Edge-Ring",
+    "Loc",
+    "Random",
+    "Scratch",
+    "Near-full"
+  ]
+}

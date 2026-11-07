@@ -1,0 +1,3 @@
+backend,processor_qubits,depth,two_qubit_gates,total_ops,ops,circuit_duration_us,mean_readout_error,mean_two_qubit_error,qpu_time_per_wafer_ms_1024_shots
+FakeTorino,133,48,21,214,"{""rz"": 111, ""sx"": 82, ""cz"": 21, ""measure"": 8, ""barrier"": 1}",2.8800000000000003,0.01953125,0.0037269719124155077,258.94912
+FakeSherbrooke,127,70,21,270,"{""rz"": 143, ""sx"": 106, ""ecr"": 21, ""measure"": 8, ""barrier"": 1}",8.504888888888885,0.0106201171875,0.006034964467135774,264.70900622222223

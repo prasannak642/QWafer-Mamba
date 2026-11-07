@@ -1,0 +1,679 @@
+{
+  "dataset": "WM-811K",
+  "task": "8-class defect-pattern classification (none excluded)",
+  "version": "v4 (IJIES revision)",
+  "n": 25519,
+  "split_sizes_lot": {
+    "train": 17485,
+    "val": 3162,
+    "test": 4872
+  },
+  "seeds": [
+    42,
+    7,
+    123,
+    2024,
+    31
+  ],
+  "epochs_stage1_max": 60,
+  "imbalance": "loss",
+  "partitions": [
+    42,
+    101,
+    202,
+    303
+  ],
+  "main_results_mean": {
+    "CNN (network head)": {
+      "accuracy": 0.93358,
+      "macro_precision": 0.87894,
+      "macro_recall": 0.9299,
+      "macro_f1": 0.90109,
+      "weighted_f1": 0.93396,
+      "mcc": 0.91463,
+      "macro_auc": 0.99208
+    },
+    "EfficientNet-B0 (network head)": {
+      "accuracy": 0.95033,
+      "macro_precision": 0.92166,
+      "macro_recall": 0.93952,
+      "macro_f1": 0.93001,
+      "weighted_f1": 0.95042,
+      "mcc": 0.93596,
+      "macro_auc": 0.98866
+    },
+    "MobileViT-XXS (network head)": {
+      "accuracy": 0.94204,
+      "macro_precision": 0.89797,
+      "macro_recall": 0.92582,
+      "macro_f1": 0.91036,
+      "weighted_f1": 0.94223,
+      "mcc": 0.92529,
+      "macro_auc": 0.98469
+    },
+    "QWafer-Mamba ablation: frozen \u03b8": {
+      "accuracy": 0.93547,
+      "macro_precision": 0.90123,
+      "macro_recall": 0.91309,
+      "macro_f1": 0.90575,
+      "weighted_f1": 0.93559,
+      "mcc": 0.91673,
+      "macro_auc": 0.97268
+    },
+    "QWafer-Mamba ablation: no entanglement": {
+      "accuracy": 0.9319,
+      "macro_precision": 0.87672,
+      "macro_recall": 0.90952,
+      "macro_f1": 0.89009,
+      "weighted_f1": 0.93221,
+      "mcc": 0.91222,
+      "macro_auc": 0.97935
+    },
+    "QWafer-Mamba ablation: reps = 0": {
+      "accuracy": 0.92824,
+      "macro_precision": 0.86237,
+      "macro_recall": 0.91087,
+      "macro_f1": 0.88253,
+      "weighted_f1": 0.92881,
+      "mcc": 0.90769,
+      "macro_auc": 0.97976
+    },
+    "QWafer-Mamba ablation: reps = 1": {
+      "accuracy": 0.9376,
+      "macro_precision": 0.90609,
+      "macro_recall": 0.92092,
+      "macro_f1": 0.91273,
+      "weighted_f1": 0.93776,
+      "mcc": 0.91955,
+      "macro_auc": 0.97912
+    },
+    "QWafer-Mamba, trainable quantum layer (proposed)": {
+      "accuracy": 0.93662,
+      "macro_precision": 0.90207,
+      "macro_recall": 0.91971,
+      "macro_f1": 0.90979,
+      "weighted_f1": 0.93671,
+      "mcc": 0.91827,
+      "macro_auc": 0.98378
+    },
+    "ResNet-18 (network head)": {
+      "accuracy": 0.93957,
+      "macro_precision": 0.89081,
+      "macro_recall": 0.92702,
+      "macro_f1": 0.90661,
+      "weighted_f1": 0.93989,
+      "mcc": 0.9222,
+      "macro_auc": 0.98721
+    },
+    "VQC only (RealAmplitudes + COBYLA)": {
+      "accuracy": 0.63124,
+      "macro_precision": 0.45063,
+      "macro_recall": 0.45973,
+      "macro_f1": 0.41265,
+      "weighted_f1": 0.62279,
+      "mcc": 0.55989,
+      "macro_auc": 0.85196
+    },
+    "WaferMamba (network head)": {
+      "accuracy": 0.92685,
+      "macro_precision": 0.87955,
+      "macro_recall": 0.92198,
+      "macro_f1": 0.89751,
+      "weighted_f1": 0.92782,
+      "mcc": 0.90637,
+      "macro_auc": 0.98914
+    },
+    "WaferMamba fine-tuned, MLP head (control)": {
+      "accuracy": 0.94044,
+      "macro_precision": 0.91284,
+      "macro_recall": 0.927,
+      "macro_f1": 0.91938,
+      "weighted_f1": 0.94053,
+      "mcc": 0.92317,
+      "macro_auc": 0.98804
+    },
+    "WaferMamba fine-tuned, bounded tanh head (control)": {
+      "accuracy": 0.93941,
+      "macro_precision": 0.90953,
+      "macro_recall": 0.92274,
+      "macro_f1": 0.91533,
+      "weighted_f1": 0.93947,
+      "mcc": 0.92184,
+      "macro_auc": 0.98809
+    },
+    "WaferMamba fine-tuned, classical head (control)": {
+      "accuracy": 0.94142,
+      "macro_precision": 0.91226,
+      "macro_recall": 0.9267,
+      "macro_f1": 0.91902,
+      "weighted_f1": 0.94148,
+      "mcc": 0.92444,
+      "macro_auc": 0.99194
+    },
+    "WaferMamba fine-tuned, trigonometric head (control)": {
+      "accuracy": 0.93994,
+      "macro_precision": 0.91192,
+      "macro_recall": 0.9257,
+      "macro_f1": 0.91821,
+      "weighted_f1": 0.94009,
+      "mcc": 0.92254,
+      "macro_auc": 0.98716
+    },
+    "WaferMamba latent \u2192 LR: Latent": {
+      "accuracy": 0.93649,
+      "macro_precision": 0.90805,
+      "macro_recall": 0.92228,
+      "macro_f1": 0.91434,
+      "weighted_f1": 0.93676,
+      "mcc": 0.91819,
+      "macro_auc": 0.99113
+    },
+    "WaferMamba latent \u2192 LR: Latent + Quantum reservoir": {
+      "accuracy": 0.93629,
+      "macro_precision": 0.90881,
+      "macro_recall": 0.9225,
+      "macro_f1": 0.91498,
+      "weighted_f1": 0.93654,
+      "mcc": 0.9179,
+      "macro_auc": 0.99025
+    },
+    "WaferMamba latent \u2192 LR: Latent + RFF (control)": {
+      "accuracy": 0.93576,
+      "macro_precision": 0.91025,
+      "macro_recall": 0.92083,
+      "macro_f1": 0.91485,
+      "weighted_f1": 0.93605,
+      "mcc": 0.9172,
+      "macro_auc": 0.99054
+    },
+    "WaferMamba latent \u2192 LR: Latent + VQC": {
+      "accuracy": 0.93658,
+      "macro_precision": 0.90941,
+      "macro_recall": 0.92192,
+      "macro_f1": 0.91494,
+      "weighted_f1": 0.93682,
+      "mcc": 0.91828,
+      "macro_auc": 0.99135
+    },
+    "WaferMamba latent \u2192 LR: Quantum reservoir only": {
+      "accuracy": 0.4869,
+      "macro_precision": 0.34583,
+      "macro_recall": 0.40048,
+      "macro_f1": 0.32742,
+      "weighted_f1": 0.52174,
+      "mcc": 0.37813,
+      "macro_auc": 0.78273
+    },
+    "WaferMamba latent \u2192 LR: RFF only": {
+      "accuracy": 0.34709,
+      "macro_precision": 0.23677,
+      "macro_recall": 0.26264,
+      "macro_f1": 0.20024,
+      "weighted_f1": 0.37213,
+      "mcc": 0.22531,
+      "macro_auc": 0.69087
+    }
+  },
+  "main_results_std": {
+    "CNN (network head)": {
+      "accuracy": 0.00604,
+      "macro_precision": 0.01222,
+      "macro_recall": 0.00721,
+      "macro_f1": 0.01027,
+      "weighted_f1": 0.00593,
+      "mcc": 0.00765,
+      "macro_auc": 0.00153
+    },
+    "EfficientNet-B0 (network head)": {
+      "accuracy": 0.00229,
+      "macro_precision": 0.00724,
+      "macro_recall": 0.00381,
+      "macro_f1": 0.00412,
+      "weighted_f1": 0.00232,
+      "mcc": 0.00297,
+      "macro_auc": 0.0024
+    },
+    "MobileViT-XXS (network head)": {
+      "accuracy": 0.00293,
+      "macro_precision": 0.00817,
+      "macro_recall": 0.00562,
+      "macro_f1": 0.00633,
+      "weighted_f1": 0.0029,
+      "mcc": 0.00376,
+      "macro_auc": 0.00475
+    },
+    "QWafer-Mamba ablation: frozen \u03b8": {
+      "accuracy": 0.00459,
+      "macro_precision": 0.01036,
+      "macro_recall": 0.00875,
+      "macro_f1": 0.00979,
+      "weighted_f1": 0.00456,
+      "mcc": 0.00595,
+      "macro_auc": 0.00673
+    },
+    "QWafer-Mamba ablation: no entanglement": {
+      "accuracy": 0.00468,
+      "macro_precision": 0.01177,
+      "macro_recall": 0.0074,
+      "macro_f1": 0.00963,
+      "weighted_f1": 0.00453,
+      "mcc": 0.00598,
+      "macro_auc": 0.00518
+    },
+    "QWafer-Mamba ablation: reps = 0": {
+      "accuracy": 0.00932,
+      "macro_precision": 0.02799,
+      "macro_recall": 0.00954,
+      "macro_f1": 0.02043,
+      "weighted_f1": 0.00877,
+      "mcc": 0.01175,
+      "macro_auc": 0.00469
+    },
+    "QWafer-Mamba ablation: reps = 1": {
+      "accuracy": 0.00198,
+      "macro_precision": 0.00821,
+      "macro_recall": 0.00415,
+      "macro_f1": 0.00452,
+      "weighted_f1": 0.00197,
+      "mcc": 0.00254,
+      "macro_auc": 0.00829
+    },
+    "QWafer-Mamba, trainable quantum layer (proposed)": {
+      "accuracy": 0.00193,
+      "macro_precision": 0.00776,
+      "macro_recall": 0.00428,
+      "macro_f1": 0.00603,
+      "weighted_f1": 0.00195,
+      "mcc": 0.00249,
+      "macro_auc": 0.00412
+    },
+    "ResNet-18 (network head)": {
+      "accuracy": 0.00354,
+      "macro_precision": 0.01138,
+      "macro_recall": 0.00961,
+      "macro_f1": 0.01027,
+      "weighted_f1": 0.00342,
+      "mcc": 0.00456,
+      "macro_auc": 0.00247
+    },
+    "VQC only (RealAmplitudes + COBYLA)": {
+      "accuracy": 0.09517,
+      "macro_precision": 0.07566,
+      "macro_recall": 0.06213,
+      "macro_f1": 0.06987,
+      "weighted_f1": 0.08878,
+      "mcc": 0.10292,
+      "macro_auc": 0.04192
+    },
+    "WaferMamba (network head)": {
+      "accuracy": 0.02105,
+      "macro_precision": 0.02526,
+      "macro_recall": 0.01504,
+      "macro_f1": 0.02185,
+      "weighted_f1": 0.01984,
+      "mcc": 0.0261,
+      "macro_auc": 0.00199
+    },
+    "WaferMamba fine-tuned, MLP head (control)": {
+      "accuracy": 0.00286,
+      "macro_precision": 0.00765,
+      "macro_recall": 0.00368,
+      "macro_f1": 0.00483,
+      "weighted_f1": 0.00279,
+      "mcc": 0.00365,
+      "macro_auc": 0.00373
+    },
+    "WaferMamba fine-tuned, bounded tanh head (control)": {
+      "accuracy": 0.00163,
+      "macro_precision": 0.00637,
+      "macro_recall": 0.00235,
+      "macro_f1": 0.00411,
+      "weighted_f1": 0.00163,
+      "mcc": 0.00211,
+      "macro_auc": 0.00334
+    },
+    "WaferMamba fine-tuned, classical head (control)": {
+      "accuracy": 0.00222,
+      "macro_precision": 0.00676,
+      "macro_recall": 0.00279,
+      "macro_f1": 0.00399,
+      "weighted_f1": 0.00213,
+      "mcc": 0.00284,
+      "macro_auc": 0.00179
+    },
+    "WaferMamba fine-tuned, trigonometric head (control)": {
+      "accuracy": 0.00314,
+      "macro_precision": 0.00967,
+      "macro_recall": 0.00371,
+      "macro_f1": 0.00675,
+      "weighted_f1": 0.00305,
+      "mcc": 0.00401,
+      "macro_auc": 0.00359
+    },
+    "WaferMamba latent \u2192 LR: Latent": {
+      "accuracy": 0.00755,
+      "macro_precision": 0.01714,
+      "macro_recall": 0.0039,
+      "macro_f1": 0.01022,
+      "weighted_f1": 0.00733,
+      "mcc": 0.00956,
+      "macro_auc": 0.00217
+    },
+    "WaferMamba latent \u2192 LR: Latent + Quantum reservoir": {
+      "accuracy": 0.00744,
+      "macro_precision": 0.01526,
+      "macro_recall": 0.00374,
+      "macro_f1": 0.00962,
+      "weighted_f1": 0.00724,
+      "mcc": 0.00944,
+      "macro_auc": 0.0022
+    },
+    "WaferMamba latent \u2192 LR: Latent + RFF (control)": {
+      "accuracy": 0.00855,
+      "macro_precision": 0.01511,
+      "macro_recall": 0.00506,
+      "macro_f1": 0.00981,
+      "weighted_f1": 0.0083,
+      "mcc": 0.01089,
+      "macro_auc": 0.00224
+    },
+    "WaferMamba latent \u2192 LR: Latent + VQC": {
+      "accuracy": 0.00746,
+      "macro_precision": 0.01558,
+      "macro_recall": 0.00488,
+      "macro_f1": 0.00941,
+      "weighted_f1": 0.00729,
+      "mcc": 0.00946,
+      "macro_auc": 0.00221
+    },
+    "WaferMamba latent \u2192 LR: Quantum reservoir only": {
+      "accuracy": 0.01061,
+      "macro_precision": 0.01354,
+      "macro_recall": 0.02112,
+      "macro_f1": 0.01492,
+      "weighted_f1": 0.00954,
+      "mcc": 0.01049,
+      "macro_auc": 0.00845
+    },
+    "WaferMamba latent \u2192 LR: RFF only": {
+      "accuracy": 0.02651,
+      "macro_precision": 0.01501,
+      "macro_recall": 0.01317,
+      "macro_f1": 0.01249,
+      "weighted_f1": 0.02886,
+      "mcc": 0.03129,
+      "macro_auc": 0.02001
+    }
+  },
+  "quantum_verdicts": {
+    "QWaferMamba_E2E_vs_same_schedule_classical": {
+      "mean_delta_macro_f1": -0.009242712289039778,
+      "seeds_ci_positive": 0,
+      "ttest_p_across_seeds": 0.00362194029618608,
+      "beats_classical_control": true,
+      "claim_supported": false
+    },
+    "quantum_reservoir_fusion": {
+      "mean_delta_macro_f1": 0.0005711909285368886,
+      "seeds_ci_positive": 0,
+      "ttest_p_across_seeds": 0.5946790893597904,
+      "beats_classical_control": true,
+      "claim_supported": false
+    },
+    "vqc_cobyla_fusion": {
+      "mean_delta_macro_f1": 0.000642354334382527,
+      "seeds_ci_positive": 0,
+      "ttest_p_across_seeds": 0.30521770284208677,
+      "beats_classical_control": true,
+      "claim_supported": false
+    }
+  },
+  "stats_primary_and_holm": [
+    {
+      "comparison": "QWafer-Mamba \u2212 WaferMamba_FT",
+      "family": "primary",
+      "mean_delta_macro_f1": -0.009236,
+      "sd_over_seeds": 0.003368,
+      "ci95_low_t": -0.013419,
+      "ci95_high_t": -0.005054,
+      "ci90_low_t": -0.012448,
+      "ci90_high_t": -0.006025,
+      "p_paired_t": 0.003585,
+      "p_TOST_margin": 0.319442,
+      "equivalent_within_margin": false,
+      "hboot95_low": -0.015522,
+      "hboot95_high": -0.003059,
+      "p_holm": 0.003585
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 WaferMamba",
+      "family": "secondary",
+      "mean_delta_macro_f1": 0.012282,
+      "sd_over_seeds": 0.018794,
+      "ci95_low_t": -0.011053,
+      "ci95_high_t": 0.035617,
+      "ci90_low_t": -0.005636,
+      "ci90_high_t": 0.030199,
+      "p_paired_t": 0.217736,
+      "p_TOST_margin": 0.600274,
+      "equivalent_within_margin": false,
+      "hboot95_low": -0.0029,
+      "hboot95_high": 0.029514,
+      "p_holm": 1.0
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 ResNet18",
+      "family": "secondary",
+      "mean_delta_macro_f1": 0.003177,
+      "sd_over_seeds": 0.015466,
+      "ci95_low_t": -0.016027,
+      "ci95_high_t": 0.022381,
+      "ci90_low_t": -0.011568,
+      "ci90_high_t": 0.017923,
+      "p_paired_t": 0.669827,
+      "p_TOST_margin": 0.189887,
+      "equivalent_within_margin": false,
+      "hboot95_low": -0.010718,
+      "hboot95_high": 0.019714,
+      "p_holm": 1.0
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 CNN",
+      "family": "secondary",
+      "mean_delta_macro_f1": 0.008697,
+      "sd_over_seeds": 0.013177,
+      "ci95_low_t": -0.007665,
+      "ci95_high_t": 0.025059,
+      "ci90_low_t": -0.003866,
+      "ci90_high_t": 0.02126,
+      "p_paired_t": 0.214026,
+      "p_TOST_margin": 0.417936,
+      "equivalent_within_margin": false,
+      "hboot95_low": -0.004608,
+      "hboot95_high": 0.022851,
+      "p_holm": 1.0
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 EfficientNetB0",
+      "family": "secondary",
+      "mean_delta_macro_f1": -0.020226,
+      "sd_over_seeds": 0.005634,
+      "ci95_low_t": -0.027222,
+      "ci95_high_t": -0.01323,
+      "ci90_low_t": -0.025598,
+      "ci90_high_t": -0.014855,
+      "p_paired_t": 0.001307,
+      "p_TOST_margin": 0.992316,
+      "equivalent_within_margin": false,
+      "hboot95_low": -0.029674,
+      "hboot95_high": -0.011781,
+      "p_holm": 0.015684
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 MobileViTXXS",
+      "family": "secondary",
+      "mean_delta_macro_f1": -0.000576,
+      "sd_over_seeds": 0.008314,
+      "ci95_low_t": -0.010899,
+      "ci95_high_t": 0.009747,
+      "ci90_low_t": -0.008502,
+      "ci90_high_t": 0.007351,
+      "p_paired_t": 0.884475,
+      "p_TOST_margin": 0.032169,
+      "equivalent_within_margin": true,
+      "hboot95_low": -0.011015,
+      "hboot95_high": 0.009506,
+      "p_holm": 1.0
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 MLP_FT",
+      "family": "secondary",
+      "mean_delta_macro_f1": -0.009593,
+      "sd_over_seeds": 0.004333,
+      "ci95_low_t": -0.014973,
+      "ci95_high_t": -0.004213,
+      "ci90_low_t": -0.013724,
+      "ci90_high_t": -0.005462,
+      "p_paired_t": 0.007756,
+      "p_TOST_margin": 0.421948,
+      "equivalent_within_margin": false,
+      "hboot95_low": -0.016131,
+      "hboot95_high": -0.003724,
+      "p_holm": 0.069801
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 Tanh_FT",
+      "family": "secondary",
+      "mean_delta_macro_f1": -0.005546,
+      "sd_over_seeds": 0.005775,
+      "ci95_low_t": -0.012717,
+      "ci95_high_t": 0.001624,
+      "ci90_low_t": -0.011052,
+      "ci90_high_t": -4.1e-05,
+      "p_paired_t": 0.098241,
+      "p_TOST_margin": 0.079849,
+      "equivalent_within_margin": false,
+      "hboot95_low": -0.012518,
+      "hboot95_high": 0.001144,
+      "p_holm": 0.687685
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 Trig_FT",
+      "family": "secondary",
+      "mean_delta_macro_f1": -0.008426,
+      "sd_over_seeds": 0.003277,
+      "ci95_low_t": -0.012496,
+      "ci95_high_t": -0.004357,
+      "ci90_low_t": -0.011551,
+      "ci90_high_t": -0.005302,
+      "p_paired_t": 0.004536,
+      "p_TOST_margin": 0.171712,
+      "equivalent_within_margin": false,
+      "hboot95_low": -0.014782,
+      "hboot95_high": -0.002878,
+      "p_holm": 0.045365
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 Q_NoEnt",
+      "family": "secondary",
+      "mean_delta_macro_f1": 0.019701,
+      "sd_over_seeds": 0.00616,
+      "ci95_low_t": 0.012052,
+      "ci95_high_t": 0.027349,
+      "ci90_low_t": 0.013828,
+      "ci90_high_t": 0.025573,
+      "p_paired_t": 0.002023,
+      "p_TOST_margin": 0.98779,
+      "equivalent_within_margin": false,
+      "hboot95_low": 0.010141,
+      "hboot95_high": 0.030126,
+      "p_holm": 0.022251
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 Q_Frozen",
+      "family": "secondary",
+      "mean_delta_macro_f1": 0.004037,
+      "sd_over_seeds": 0.010166,
+      "ci95_low_t": -0.008585,
+      "ci95_high_t": 0.016659,
+      "ci90_low_t": -0.005655,
+      "ci90_high_t": 0.013729,
+      "p_paired_t": 0.424694,
+      "p_TOST_margin": 0.129933,
+      "equivalent_within_margin": false,
+      "hboot95_low": -0.005586,
+      "hboot95_high": 0.014789,
+      "p_holm": 1.0
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 Q_Reps0",
+      "family": "secondary",
+      "mean_delta_macro_f1": 0.027258,
+      "sd_over_seeds": 0.015313,
+      "ci95_low_t": 0.008245,
+      "ci95_high_t": 0.046272,
+      "ci90_low_t": 0.012659,
+      "ci90_high_t": 0.041858,
+      "p_paired_t": 0.016396,
+      "p_TOST_margin": 0.967326,
+      "equivalent_within_margin": false,
+      "hboot95_low": 0.015107,
+      "hboot95_high": 0.04292,
+      "p_holm": 0.131169
+    },
+    {
+      "comparison": "QWafer-Mamba \u2212 Q_Reps1",
+      "family": "secondary",
+      "mean_delta_macro_f1": -0.00294,
+      "sd_over_seeds": 0.004139,
+      "ci95_low_t": -0.00808,
+      "ci95_high_t": 0.002199,
+      "ci90_low_t": -0.006886,
+      "ci90_high_t": 0.001006,
+      "p_paired_t": 0.187356,
+      "p_TOST_margin": 0.009438,
+      "equivalent_within_margin": true,
+      "hboot95_low": -0.010252,
+      "hboot95_high": 0.004048,
+      "p_holm": 1.0
+    }
+  ],
+  "quantum_layer": {
+    "qubits": 8,
+    "encoding": "RY angle encoding",
+    "ansatz": "RealAmplitudes reps=3, reverse_linear",
+    "trainable_theta": 32,
+    "readout": "<Z_q> per qubit, one qubit per class",
+    "optimizer": "AdamW, exact gradients (verified equal to parameter-shift)",
+    "stage2_epochs_max": 20,
+    "stage2_head_warmup_epochs": 3,
+    "stage2_class_weight_power": 0.5,
+    "lr_backbone": 0.0002,
+    "lr_quantum": 0.01
+  },
+  "vqc_cobyla": {
+    "qubits": 8,
+    "ansatz": "RealAmplitudes reps=2, reverse_linear",
+    "trainable_theta": 24,
+    "readout": "P(q0,q1,q2) -> 8 classes",
+    "optimizer": "COBYLA",
+    "maxiter": 400,
+    "train_subset_per_class": 300
+  },
+  "reservoir": {
+    "qubits": 8,
+    "layers": 3,
+    "outputs": 36,
+    "pca_variance_kept": {
+      "42": 0.9925296306610107,
+      "7": 0.9928467273712158,
+      "123": 0.9932730197906494,
+      "2024": 0.9938945770263672,
+      "31": 0.9922354817390442
+    }
+  },
+  "figure_seeds": {
+    "QWaferMamba_E2E": 31,
+    "WaferMamba": 31
+  }
+}

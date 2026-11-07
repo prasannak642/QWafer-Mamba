@@ -1,0 +1,6 @@
+component,ms_per_wafer
+"SS2D encoder + bridge (GPU, batch 1)",13.919928073883057
+"quantum layer, exact statevector simulation (GPU, batch 1)",11.956377029418945
+"quantum layer on FakeTorino: 1024 shots x (circuit 2.9 us + delay 250 us), estimate",258.94912
+"quantum layer on FakeSherbrooke: 1024 shots x (circuit 8.5 us + delay 250 us), estimate",264.70900622222223
+"compilation, job submission, queue and network transfer",
